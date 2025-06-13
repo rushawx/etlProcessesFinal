@@ -5,7 +5,8 @@
 - **task_1/ydb_connection.txt** — инструкции и параметры для подключения и импорта данных в Yandex Database (YDB).
 - **task_2/dag.py** — DAG для Apache Airflow, который запускает PySpark job на Yandex DataProc.
 - **task_2/job.py** — PySpark скрипт для обработки данных: читает parquet-файл, группирует по возрасту, сохраняет результат в S3 или HDFS.
-
+- **task_3/kafka-write.py** — PySpark скрипт для записи данных в Kafka.
+- **task_3/kafka-read-stream.py** — PySpark скрипт для потоковой обработки данных из Kafka.
 ## Как запустить
 
 ### 1. Импорт данных в YDB
