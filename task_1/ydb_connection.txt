@@ -1,0 +1,18 @@
+ydb \
+ --endpoint grpcs://ydb.serverless.yandexcloud.net:2135 \
+ --database /ru-central1/b1gtt25blltlm3lce53p/etn321n1bs1b81ednv2b \
+ --iam-token-file /Users/antonshishkov/iam-token.txt \
+ discovery whoami
+
+yc iam create-token > iam-token.txt
+
+ydb \
+--endpoint grpcs://ydb.serverless.yandexcloud.net:2135 \
+--database /ru-central1/b1gtt25blltlm3lce53p/etn321n1bs1b81ednv2b \
+--iam-token-file /Users/antonshishkov/iam-token.txt \
+import file csv \
+--path table400 \
+--delimiter "," \
+--skip-rows 1 \
+--null-value "" \
+task_1/credit_scoring_sample.csv
