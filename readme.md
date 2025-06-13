@@ -54,3 +54,13 @@ DAG можно импортировать в Airflow и активировать
 
 DAG
 ![airflow_pyspark](images/airflow_pyspark.png)
+
+### 5. Чтение сообщений из Kafka и запись в S3 с помощью PySpark
+
+Скрипт [`kafka-read-stream.py`](task_3/kafka-read-stream.py) предназначен для чтения сообщений из Kafka-топика с помощью PySpark Structured Streaming и сохранения их в указанный S3-бакет.
+
+Скриншот отработавшего задания
+![pyspark_task_stream](images/pyspark_task_stream.png)
+
+Скриншот результата в бакете
+![kafka_stream_output](images/kafka_stream_output.png)
